@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Outing Monitoring</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎓 Student Outing Monitoring</h1>
+
+    <!-- Student Section -->
+    <section class="student-section">
+      <h2>Student Check</h2>
+      <form id="outingForm">
+        <input type="text" id="studentId" placeholder="Enter 5-digit Student ID" required />
+        <div class="buttons">
+          <button type="submit" name="action" value="register">Register Outing</button>
+          <button type="submit" name="action" value="checkin">Check In</button>
+        </div>
+        <p id="error" class="error"></p>
+      </form>
+    </section>
+
+    <!-- Admin Login -->
+    <section class="admin-login">
+      <h2>Admin Login</h2>
+      <form id="adminForm">
+        <input type="password" id="adminPass" placeholder="Enter Admin Password" required />
+        <button type="submit">Login as Admin</button>
+      </form>
+    </section>
+
+    <!-- Admin Panel (Hidden Initially) -->
+    <section class="admin-section" id="adminPanel" style="display: none;">
+      <h2>Admin Panel</h2>
+      <button id="viewPending">🔍 View Pending Students</button>
+      <table id="pendingTable">
+        <thead>
+          <tr>
+            <th>Student ID</th>
+            <th>Out Time</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </div>
+  <!-- Student Logs Section -->
+<section class="log-section">
+  <h2>Your Outing Logs</h2>
+  <button id="viewLogs">📋 View My Logs</button>
+  <table id="logTable">
+    <thead>
+      <tr>
+        <th>Out Time</th>
+        <th>In Time</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</section>
+
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
